@@ -1,0 +1,35 @@
+\documentclass[11pt]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric}
+
+\usepackage{fontspec}
+\usepackage{unicode-math}
+\setmathfont{Tex Gyre Schola Math}
+\usepackage[type={CC}, version={4.0}, modifier={by-sa}]{doclicense} % Add text and icons for creative commons license
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{congame}
+
+\begin{document}
+\begin{tikzpicture}
+\input{grid.tex}
+%\node at (0,3.45in) {{\setmainfont[Scale=2.5]{Century Gothic-Bold} \Huge Con Game}};
+\node[anchor=north] at (0,3.75in) {{\setmainfont[Scale=2.5]{Century Gothic-Bold} \Huge Con Game}};
+
+%\node[rotate=90] at (-4.25in, 3.45in) {\includegraphics[height=6cm]{navajo_ornament_4.png}};
+%\node[rotate=90] at (4.25in, 3.45in) {\includegraphics[height=6cm]{navajo_ornament_4.png}};
+
+\setmainfont{Tex Gyre Schola}
+\node[anchor=north] at (-4.25in, 2.925in) {\input{rules_text.tex}};
+\node[text width=6cm] at (-4.25in, -1.6in) {\input{die_table.tex}};
+
+\node[anchor=north] at (4.25in, 2.925in) {\input{rules_text2.tex}};
+
+\node[anchor=south] at (0in, -3.75in) {\LARGE Designed by Michael Purcell};
+\node[anchor=south, text width=6cm, align=left] at (-4.25in, -3.75in) {\textbf{Contact:} ttkttkt@gmail.com \phantom{\LARGE g}};
+%\node[anchor=south, text width=6cm, align=left] at (4.25in, -3.75in) {\textbf{License:} CC BY-SA 4.0 \phantom{\LARGE g}};
+\node[anchor=south, text width=6cm, align=left] at (4.25in, -3.75in) {\textbf{Player Name:} \underline{\phantom{Michael Purcell}\phantom{\LARGE g}}};
+
+\path (-148.5mm, -105mm) -- (148.5mm, 105mm);
+\end{tikzpicture}
+\end{document}
